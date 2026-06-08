@@ -59,7 +59,7 @@ const Home = () => {
     return (
       <section className='relative z-10 flex items-center justify-center min-h-screen w-full bg-white px-4 py-16 gap-8'>
         <Background />
-         <p className='text-2xl font-bold font-caveat ' >{text}</p>
+         <p className='text-2xl font-bold font-caveat text-center' >{text}</p>
         </section>
     )
   }

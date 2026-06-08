@@ -5,15 +5,11 @@ import { MdFullscreenExit } from 'react-icons/md'
 
 const MemoryGardern = () => {
 const imgs = [
-  "/memoryboy.webp",
-  "/memorygirl.webp",
-  "/tree.webp",
-  "/music-boy.webp",
-  "/music-girl.webp",
-  "/letterboy.webp",
-  "/final-boy.webp",
-  "/shipped-car.webp",
-  "bd.webp",
+  "/yoon/yoon1.webp",
+  "/yoon/yoon2.webp",
+  "/yoon/yoon3.webp",
+  "/yoon/yoon4.webp"
+
 ];
 
 useEffect(() => {
