@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-caveat: "Caveat", cursive;
+  --font-pacifico : "Pacifico", cursive;
+}
+
+/* Background graphics: clouds and birds */
+.bg-cloud,
+.bg-birds {
+  position: absolute;
+  will-change: transform, opacity;
+}
+
+.cloud-1 { top: 6%; left: -25%; animation: cloudMove 60s linear infinite; }
+.cloud-2 { top: 28%; left: -40%; animation: cloudMove 90s linear infinite; opacity: 0.95; }
+.cloud-3 { top: 62%; left: -20%; animation: cloudMove 70s linear infinite; opacity: 0.92; }
+
+.bg-birds { top: 18%; left: -20%; animation: birdsFly 16s linear infinite; opacity: 0.95 }
+.bg-birds .bird { transform-origin: center; }
+.bg-birds .b2 { animation: birdFlap 1.2s ease-in-out infinite; }
+.bg-birds .b3 { animation: birdFlap 1s ease-in-out infinite; }
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(160vw); }
+}
+
+@keyframes birdsFly {
+  0% { transform: translateX(0) translateY(0) scale(0.9); }
+  50% { transform: translateX(60vw) translateY(-20px) scale(1); }
+  100% { transform: translateX(140vw) translateY(0) scale(0.9); }
+}
+
+@keyframes birdFlap {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-6deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.bg-cloud svg, .bg-birds svg { display: block; }
+
+/* Emoji-specific styles */
+.bg-cloud .emoji { display: inline-block; font-size: clamp(2rem, 5vw, 5rem); line-height: 1; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.06)); }
+.cloud-1 .emoji { font-size: clamp(2rem, 4.5vw, 4.5rem); }
+.cloud-2 .emoji { font-size: clamp(2.2rem, 6vw, 6rem); }
+.cloud-3 .emoji { font-size: clamp(1.8rem, 4vw, 4rem); }
+
+.bg-birds { width: 300px; height: 120px; }
+.bg-birds .emoji { display: inline-block; font-size: 1.6rem; margin-right: 0.6rem; filter: drop-shadow(0 6px 8px rgba(0,0,0,0.06)); }
+.bg-birds .b1 { animation: birdFlap 1.4s ease-in-out infinite; }
+.bg-birds .b2 { animation: birdFlap 1.1s ease-in-out infinite; transform-origin: center; }
+.bg-birds .b3 { animation: birdFlap 1s ease-in-out infinite; transform-origin: center; }
+
+/* Hide overflow on small screens to avoid emoji cutoff */
+@media (max-width: 640px) {
+  .bg-cloud .emoji { font-size: clamp(1.2rem, 6vw, 2.6rem); }
+  .bg-birds .emoji { font-size: 1.2rem; }
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(300px);
+  }
+}
+
+.falling-flower {
+  animation: fall 6s linear infinite;
+}
+
+
+
