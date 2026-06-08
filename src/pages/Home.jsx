@@ -44,7 +44,15 @@ const Home = () => {
    const images = [
     "/hero-boy.webp",
     "/hero-girl.webp",
-    "/loading.webp"
+    "/loading.webp",
+    "/memoryboy.webp",
+    "/tree.webp",
+    "/music-boy.webp",
+    "/music-girl.webp",
+   "/letterboy.webp",
+    "/final-boy.webp",
+    "/shipped-car.webp",
+    "/bd.webp"
   ];
  
 

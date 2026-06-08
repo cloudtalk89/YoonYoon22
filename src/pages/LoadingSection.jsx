@@ -6,7 +6,6 @@ import Background from '../components/Background'
 const LoadingSection = () => {
   const images = [
   "/memoryboy.webp",
-  "/memorygirl.webp",
   "/tree.webp",
   "/music-boy.webp",
   "/music-girl.webp",
